@@ -87,6 +87,7 @@ export const metadata: Metadata = {
     'geo.placename': 'Taif, Saudi Arabia',
     'geo.position': '21.2854;40.4183',
     'ICBM': '21.2854, 40.4183',
+    'mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'default',
     'format-detection': 'telephone=no',
@@ -109,6 +110,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="manifest" href="/manifest.json" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
