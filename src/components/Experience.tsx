@@ -54,10 +54,10 @@ export default function Experience() {
                         </h3>
                         <div className="flex items-center gap-2 text-primary-600 dark:text-primary-400 font-medium mt-1">
                           <Briefcase className="w-4 h-4" />
-                          {experience.company}
+                          <div className="whitespace-pre-line">{experience.company}</div>
                         </div>
                       </div>
-                      <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 mt-2 sm:mt-0 self-start">
+                      <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 mt-2 sm:mt-0 self-start whitespace-nowrap">
                         {experience.type}
                       </span>
                     </div>

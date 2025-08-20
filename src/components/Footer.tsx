@@ -30,9 +30,9 @@ const quickLinks = [
 ];
 
 const skills = [
-  "Drone Satellite Imagery Analysis and Processing",
+  "Drone and Satellite Imagery Analysis and Processing",
   "Hydrological and Watershed Modeling",
-  "Disaster Risk Assessment (Flood, GLOF, Landslide Mapping)",
+  "Disaster Risk Assessment",
   "Urban Growth and Infrastructure Mapping",
   "Climate Change Monitoring and Analysis"
 ];
