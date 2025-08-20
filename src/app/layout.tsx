@@ -82,7 +82,7 @@ export const metadata: Metadata = {
   category: 'technology',
   classification: 'GIS Professional Portfolio',
   other: {
-    'google-site-verification': 'zplA69ifzRnY0gQz',
+    'google-site-verification': 'zplA69ifzRnY0gQzT1RAi4D995kREAyBmj4JZoi4ZN8',
     'geo.region': 'SA-14',
     'geo.placename': 'Taif, Saudi Arabia',
     'geo.position': '21.2854;40.4183',
