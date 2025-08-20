@@ -312,17 +312,7 @@ Contributions are welcome! Whether you want to fix bugs, add features, or improv
 - **Core Web Vitals:** Optimized for excellent user experience
 - **SEO Score:** 100/100 with structured data
 
-## 📞 Contact
-
-**Hafeez Uddin** - GIS Specialist  
-📧 Email: hafeezuddiniiui99@gmail.com  
-📱 Phone: +966 50 365 7540  
-💼 LinkedIn: [linkedin.com/in/hafeez-uddin-87a466217](https://www.linkedin.com/in/hafeez-uddin-87a466217/)  
-🌐 Website: [hafeez-uddin.vercel.app](https://hafeez-uddin.vercel.app)
-
----
-
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
