@@ -1,0 +1,38 @@
+[
+  {
+    "id": "landslide-hazard-analysis",
+    "title": "GIS Based Spatial Analysis of Landslide Hazard in Tehsil Balakot, KP, Pakistan",
+    "type": "Research Publication",
+    "year": "2024",
+    "description": "Comprehensive spatial analysis of landslide susceptibility using GIS techniques, incorporating geological, topographical, and hydrological factors to assess hazard zones in the earthquake-prone region of Balakot.",
+    "technologies": ["ArcGIS Pro", "Remote Sensing", "Statistical Analysis", "Hazard Modeling"],
+    "highlights": [
+      "Developed landslide susceptibility maps using weighted overlay analysis",
+      "Integrated multiple data sources including DEM, geology, and precipitation data",
+      "Identified high-risk areas for disaster preparedness planning",
+      "Applied machine learning techniques for hazard prediction"
+    ],
+    "category": "Hazard and risk mapping",
+    "status": "Published",
+    "downloadUrl": "/TehsilBalakotPublication.pdf",
+    "publicationUrl": "https://poverty.com.pk/index.php/Journal/article/view/719"
+  },
+  {
+    "id": "ecotourism-assessment",
+    "title": "Ecotourism Potential Assessment for District Lower Chitral, Pakistan Using Integration of GIS and Remote Sensing",
+    "type": "Thesis Project",
+    "year": "2024",
+    "description": "Comprehensive assessment of ecotourism potential using GIS-based multi-criteria analysis, evaluating natural resources, accessibility, infrastructure, and environmental sensitivity to identify suitable areas for sustainable tourism development.",
+    "technologies": ["ArcGIS", "Multi-Criteria Analysis", "Spatial Modeling", "Environmental Assessment"],
+    "highlights": [
+      "Developed suitability maps for ecotourism development",
+      "Integrated environmental and socio-economic factors",
+      "Created tourism zoning recommendations",
+      "Assessed carrying capacity for sustainable development"
+    ],
+    "category": "Environmental Planning",
+    "status": "Published",
+    "downloadUrl": "/DistrictLowerChitralPublication.pdf",
+    "publicationUrl": "https://journal.50sea.com/index.php/IJIST/article/view/901"
+  }
+]

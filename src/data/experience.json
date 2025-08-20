@@ -1,0 +1,63 @@
+[
+  {
+    "id": "twaik-holding",
+    "title": "GIS Specialist",
+    "company": "TWAIK Holding Group",
+    "location": "Taif, Mecca, Saudi Arabia",
+    "period": "July 2025 – Current",
+    "type": "Full-time",
+    "responsibilities": [
+      "Plan and optimize service routes for pest control teams to increase efficiency",
+      "Generate GIS-based reports for internal teams and clients, including visuals of treated areas",
+      "Assist in monitoring environmental factors influencing pest activity (humidity, temperature, etc.)",
+      "Maintain accurate and updated GIS databases of all pest control and maintenance operations"
+    ],
+    "technologies": ["ArcGIS Pro", "ArcMap", "Google Earth", "High Resolution Satellite Imagery"]
+  },
+  {
+    "id": "magma-systems",
+    "title": "GIS Analyst",
+    "company": "Magma Systems (PVT) LTD.",
+    "location": "Islamabad, Pakistan",
+    "period": "2024 – 2025",
+    "type": "Full-time",
+    "responsibilities": [
+      "Spatial data analysis and visualization",
+      "Land use and land cover classification",
+      "Database management and spatial queries",
+      "Custom GIS application development",
+      "Client consultation and project management"
+    ],
+    "technologies": ["ArcMap", "ArcGIS Pro", "SQL", "Python", "FME"]
+  },
+  {
+    "id": "forestry-intern",
+    "title": "GIS Intern",
+    "company": "Forestry Planning and Monitoring Circle, GIS Lab, Forest Department, Peshawar, KP, Pakistan",
+    "location": "Peshawar, KP, Pakistan",
+    "period": "2023",
+    "type": "Internship",
+    "responsibilities": [
+      "Uses remote sensing and GIS to monitor changes in forest cover and land use",
+      "Supports sustainable forest management to mitigate climate change",
+      "Conducting spatial analysis and modeling for forestry planning",
+      "Identification of forest degradation using Remote Sensing"
+    ],
+    "technologies": ["Drone and Satellite Imagery", "ArcMap", "QGIS", "ArcGIS Pro", "ENVI", "ERDAS Imagine", "Google Earth Pro"]
+  },
+  {
+    "id": "aga-khan-intern",
+    "title": "GIS Intern",
+    "company": "AKRSP Placed with Aga Khan Agency for Habitat, AKAH-Pakistan",
+    "location": "Lower Chitral, Pakistan",
+    "period": "2023",
+    "type": "Internship",
+    "responsibilities": [
+     "Utilizes Remote Sensing and GIS to monitor and analyze natural disasters",
+      "Develops risk and hazard maps for disaster preparedness and mitigation",
+      "Assist in hazard and risk mapping using drone and satellite imagery",
+      "Creating and maintaining geodatabase of hazard and risk map"
+    ],
+    "technologies": ["ArcGIS Pro", "ArcMap", "QGIS", "Revit", "HEC-RAS", "GPS"]
+  }
+]

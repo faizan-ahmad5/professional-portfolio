@@ -1,0 +1,6 @@
+{
+  "env": {
+    "NEXT_PUBLIC_SITE_URL": "https://hafeez-uddin.vercel.app"
+  },
+  "regions": ["iad1"]
+}
