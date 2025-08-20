@@ -53,7 +53,7 @@ export default function About() {
           >
             <div className="prose prose-lg dark:prose-invert max-w-none w-full">
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed break-words text-justify">
-                I&apos;m Hafeez Uddin, a GIS Specialist currently based in Taif, Mecca, Saudi Arabia, working with Twaik Holding Group (Twaik Co. Ltd for Maintenance and Operation). My passion lies in making sense of complex geospatial data and turning it into clear, practical insights that actually make a difference, whether it&apos;s for sustainable development, infrastructure, or environmental planning.
+              I, Hafeez Uddin, am a GIS Specialist currently based in Taif, Mecca, Saudi Arabia, working with Twaik Holding Group (Twaik Co. Ltd for Maintenance and Operation). My passion lies in making sense of complex geospatial data and turning it into clear, practical insights that actually make a difference, whether it&apos;s for sustainable development, infrastructure, or environmental planning.
               </p>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed break-words text-justify">
                 With a degree in Geomatics (Remote Sensing and GIS) from the University of Peshawar, Pakistan, I&apos;ve built hands-on experience using remote sensing technologies like optical, thermal, microwave, and LiDAR. Over the years, I&apos;ve had the chance to work on projects in both Pakistan and Saudi Arabia, covering areas such as urban and regional planning, forest monitoring, disaster risk reduction, land management, and agriculture monitoring.
