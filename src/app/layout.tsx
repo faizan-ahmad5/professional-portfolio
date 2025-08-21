@@ -11,8 +11,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Hafeez Uddin - Expert GIS Specialist & Remote Sensing Engineer | ArcGIS Pro | Google Earth Engine | Portfolio Saudi Arabia",
-  description: "🗺️ Professional GIS Specialist & Remote Sensing Engineer in Saudi Arabia with 2+ years expertise in ArcGIS Pro, Google Earth Engine, ERDAS Imagine, hazard mapping, flood risk assessment, GLOF analysis, environmental planning, spatial data analysis, satellite imagery processing, disaster risk reduction, urban planning, and geospatial solutions. Based in Taif, specializing in sustainable development and climate change monitoring.",
+  title: "Hafeez Uddin - GIS Specialist & Remote Sensing Engineer",
+  description: "🗺️ Professional GIS Specialist & Remote Sensing Engineer in Saudi Arabia with 2+ years expertise in ArcGIS Pro, Google Earth Engine, hazard mapping, environmental planning, and spatial data analysis. Based in Taif, specializing in geospatial solutions.",
   keywords: [
     "Hafeez Uddin",
     "Hafeez Uddin GIS",
@@ -118,14 +118,23 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.svg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <meta name="theme-color" content="#1e40af" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            /* Critical CSS for above-the-fold content */
+            :root{--primary-50:#eff6ff;--primary-600:#2563eb;--transition-fast:150ms ease-in-out}
+            *{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+            body{margin:0;font-family:system-ui,-apple-system,sans-serif}
+            .hero-section{min-height:100vh;display:flex;align-items:center;justify-content:center}
+          `
+        }} />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -192,7 +201,9 @@ export default function RootLayout({
                   "description": "Degree in Geomatics (Remote Sensing and GIS)"
                 },
                 "knowsAbout": [
-                  "GIS",
+                  "GIS Projects",
+                  "Remote Sensing Analysis",
+                  "Environmental Analysis",
                   "Geographic Information Systems",
                   "Remote Sensing",
                   "Geospatial Analysis", 
@@ -231,6 +242,9 @@ export default function RootLayout({
                   }
                 ],
                 "serviceType": [
+                  "GIS Projects",
+                  "Remote Sensing Analysis", 
+                  "Environmental Analysis",
                   "GIS Analysis",
                   "Remote Sensing Services",
                   "Spatial Data Analysis",

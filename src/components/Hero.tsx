@@ -72,7 +72,7 @@ export default function Hero() {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-2xl md:text-4xl lg:text-5xl font-bold font-heading text-gray-900 dark:text-white"
             >
-              Hafeez Uddin
+              Hafeez Uddin - GIS Specialist & Remote Sensing Engineer
             </motion.h1>
 
             <motion.div
@@ -93,7 +93,7 @@ export default function Hero() {
             transition={{ delay: 0.8, duration: 0.6 }}
             className="text-sm md:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed"
           >
-           Adept in GIS, Remote Sensing, and spatial data analysis, specializing in delivering actionable insights for environmental and infrastructure projects.
+           Expert in GIS projects, remote sensing analysis, and environmental spatial data analysis for sustainable development solutions.
           </motion.p>
 
           {/* Contact Information */}
