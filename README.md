@@ -1,6 +1,6 @@
 # 🌟 Professional GIS Portfolio Website
 
-Welcome to my professional portfolio website! This modern, responsive web application showcases my expertise in Geographic Information Systems (GIS), Remote Sensing, and geospatial technologies. Built with cutting-edge web technologies, it features a clean, professional design optimized for both desktop and mobile devices.
+Welcome to my professional portfolio website! Built with cutting-edge web technologies, it features a clean, professional design optimized for both desktop and mobile devices.
 
 ## 🔗 Live Demo
 
