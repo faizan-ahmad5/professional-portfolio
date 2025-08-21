@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Hafeez Uddin - GIS Specialist & Remote Sensing Engineer",
+  title: "Hafeez Uddin - Geospatial Engineer",
   description: "🗺️ Professional GIS Specialist & Remote Sensing Engineer in Saudi Arabia with 2+ years expertise in ArcGIS Pro, Google Earth Engine, hazard mapping, environmental planning, and spatial data analysis. Based in Taif, specializing in geospatial solutions.",
   keywords: [
     "Hafeez Uddin",

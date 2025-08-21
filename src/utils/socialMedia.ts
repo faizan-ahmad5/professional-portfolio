@@ -3,7 +3,7 @@
 
 export const socialShareData = {
   url: 'https://hafeez-uddin.vercel.app',
-  title: 'Hafeez Uddin - Expert GIS Specialist & Remote Sensing Engineer',
+  title: 'Hafeez Uddin - Geospatial Engineer',
   description: 'Professional GIS Specialist in Saudi Arabia specializing in ArcGIS Pro, Google Earth Engine, hazard mapping, and environmental planning.',
   hashtags: ['GIS', 'RemoteSensing', 'ArcGIS', 'GoogleEarthEngine', 'Geospatial', 'SaudiArabia', 'Environmental', 'Sustainability']
 };
