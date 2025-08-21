@@ -103,14 +103,14 @@ export default function Hero() {
             transition={{ delay: 1.0, duration: 0.6 }}
             className="flex justify-center items-center"
           >
-            <div className="inline-flex items-center justify-center gap-6 text-sm md:text-base text-gray-600 dark:text-gray-300">
-              <div className="inline-flex items-center gap-2">
-                <MapPin className="w-4 h-4" style={{ verticalAlign: 'middle', marginTop: '0' }} />
-                <span style={{ verticalAlign: 'middle', lineHeight: '1' }} className="font-medium text-lg">Taif, SA</span>
+            <div className="inline-flex items-center justify-center gap-4 text-xs md:text-sm text-gray-600 dark:text-gray-300">
+              <div className="inline-flex items-center gap-1.5">
+                <MapPin className="w-3.5 h-3.5" style={{ verticalAlign: 'middle', marginTop: '0' }} />
+                <span style={{ verticalAlign: 'middle', lineHeight: '1' }} className="font-medium">Taif, SA</span>
               </div>
-              <div className="inline-flex items-center gap-2">
-                <a href="mailto:hafeezuddiniiui99@gmail.com" className="inline-flex items-center gap-2">
-                  <Mail className="w-4 h-4 hover:text-primary-600 dark:hover:text-primary-400 transition-colors" style={{ verticalAlign: 'middle', marginTop: '0' }} />
+              <div className="inline-flex items-center gap-1.5">
+                <a href="mailto:hafeezuddiniiui99@gmail.com" className="inline-flex items-center gap-1.5">
+                  <Mail className="w-3.5 h-3.5 hover:text-primary-600 dark:hover:text-primary-400 transition-colors" style={{ verticalAlign: 'middle', marginTop: '0' }} />
                   <span 
                     className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium"
                     style={{ verticalAlign: 'middle', lineHeight: '1' }}
@@ -119,9 +119,9 @@ export default function Hero() {
                   </span>
                 </a>
               </div>
-              <div className="inline-flex items-center gap-2">
-                <a href="tel:+966503657540" className="inline-flex items-center gap-2">
-                  <Phone className="w-4 h-4 hover:text-primary-600 dark:hover:text-primary-400 transition-colors" style={{ verticalAlign: 'middle', marginTop: '0' }} />
+              <div className="inline-flex items-center gap-1.5">
+                <a href="tel:+966503657540" className="inline-flex items-center gap-1.5">
+                  <Phone className="w-3.5 h-3.5 hover:text-primary-600 dark:hover:text-primary-400 transition-colors" style={{ verticalAlign: 'middle', marginTop: '0' }} />
                   <span 
                     className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors font-medium"
                     style={{ verticalAlign: 'middle', lineHeight: '1' }}

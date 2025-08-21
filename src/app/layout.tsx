@@ -117,10 +117,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="shortcut icon" href="/favicon.svg?v=2" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg?v=2" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <meta name="theme-color" content="#16a34a" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
