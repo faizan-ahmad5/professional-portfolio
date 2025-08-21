@@ -3,8 +3,9 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { MapPin, Calendar, Briefcase, ExternalLink } from 'lucide-react';
+import { MapPin, Calendar, Briefcase, ExternalLink, ArrowRight } from 'lucide-react';
 import experienceData from '@/data/experience.json';
+import { smoothScrollTo } from '@/utils/internalLinking';
 
 export default function Experience() {
   const ref = useRef(null);
@@ -88,7 +89,7 @@ export default function Experience() {
                     </div>
 
                     {/* Technologies */}
-                    <div>
+                    <div className="mb-4">
                       <h4 className="font-medium text-gray-900 dark:text-white mb-3">Technologies Used:</h4>
                       <div className="flex flex-wrap gap-2">
                         {experience.technologies.map((tech) => (
@@ -100,6 +101,26 @@ export default function Experience() {
                           </span>
                         ))}
                       </div>
+                    </div>
+
+                    {/* Internal Links to Related Sections */}
+                    <div className="flex flex-wrap gap-3 text-sm">
+                      <button
+                        onClick={() => smoothScrollTo('projects')}
+                        className="inline-flex items-center gap-1 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors underline decoration-primary-500/30 hover:decoration-primary-500"
+                      >
+                        <span>View Related Projects</span>
+                        <ArrowRight className="w-3 h-3" />
+                      </button>
+                      {experience.id === 'twaik-gis' && (
+                        <button
+                          onClick={() => smoothScrollTo('about')}
+                          className="inline-flex items-center gap-1 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors underline decoration-primary-500/30 hover:decoration-primary-500"
+                        >
+                          <span>Learn More About My Skills</span>
+                          <ArrowRight className="w-3 h-3" />
+                        </button>
+                      )}
                     </div>
 
                     {/* Hover Effect Arrow */}

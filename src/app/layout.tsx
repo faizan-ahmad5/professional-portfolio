@@ -12,7 +12,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Hafeez Uddin - GIS Specialist & Geospatial Engineer | Portfolio",
-  description: "Hafeez Uddin - Professional GIS Specialist and Geospatial Engineer based in Saudi Arabia. Expert in Remote Sensing, ArcGIS, Google Earth Engine, Hazard Mapping, and Environmental Planning with proven expertise in spatial data analysis.",
+  description: "Professional GIS Specialist and Geospatial Engineer with 2+ years experience in Remote Sensing, ArcGIS Pro, Google Earth Engine, hazard mapping, and environmental planning. Expert in spatial data analysis, satellite imagery processing, flood risk assessment, and GLOF mapping. Based in Saudi Arabia, specializing in disaster risk reduction and sustainable development solutions.",
   keywords: [
     "Hafeez Uddin",
     "Hafeez Uddin GIS",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://hafeez-uddin.vercel.app",
     title: "Hafeez Uddin - GIS Specialist & Geospatial Engineer | Portfolio",
-    description: "Hafeez Uddin - Professional GIS Specialist and Geospatial Engineer based in Saudi Arabia. Expert in Remote Sensing, ArcGIS, Google Earth Engine, Hazard Mapping, and Environmental Planning.",
+    description: "Professional GIS Specialist and Geospatial Engineer with 2+ years experience in Remote Sensing, ArcGIS Pro, Google Earth Engine, hazard mapping, and environmental planning. Expert in spatial data analysis and disaster risk reduction.",
     siteName: "Hafeez Uddin Portfolio",
     images: [
       {
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Hafeez Uddin - GIS Specialist & Geospatial Engineer",
-    description: "Professional GIS Specialist and Geospatial Engineer. Expert in Remote Sensing, ArcGIS, Google Earth Engine, Hazard Mapping, and Environmental Planning.",
+    description: "Professional GIS Specialist with expertise in Remote Sensing, ArcGIS Pro, Google Earth Engine, hazard mapping, and environmental planning. 2+ years experience in spatial data analysis.",
     images: ["/og-image.jpg"]
   },
   robots: {
@@ -91,6 +91,14 @@ export const metadata: Metadata = {
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'default',
     'format-detection': 'telephone=no',
+    'theme-color': '#1e40af',
+    'msapplication-TileColor': '#1e40af',
+    'application-name': 'Hafeez Uddin Portfolio',
+    'apple-mobile-web-app-title': 'Hafeez Uddin GIS',
+    'revisit-after': '7 days',
+    'distribution': 'global',
+    'rating': 'general',
+    'referrer': 'origin-when-cross-origin'
   },
   metadataBase: new URL('https://hafeez-uddin.vercel.app'),
 };
@@ -129,83 +137,138 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": ["Person", "ProfessionalService"],
-              "name": "Hafeez Uddin",
-              "alternateName": ["Hafeez Uddin GIS", "Hafeez Uddin Geospatial"],
-              "jobTitle": ["GIS Specialist", "Geospatial Engineer", "Remote Sensing Specialist"],
-              "description": "Professional GIS Specialist and Geospatial Engineer with expertise in Remote Sensing, ArcGIS, Google Earth Engine, Hazard Mapping, Environmental Planning, and Spatial Data Analysis. Based in Taif, Saudi Arabia.",
-              "url": "https://hafeez-uddin.vercel.app",
-              "sameAs": [
-                "https://www.linkedin.com/in/hafeez-uddin-87a466217/"
-              ],
-              "email": "hafeezuddiniiui99@gmail.com",
-              "telephone": "+966503657540",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Taif",
-                "addressRegion": "Mecca",
-                "addressCountry": "Saudi Arabia"
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": ["Person", "ProfessionalService"],
+                "name": "Hafeez Uddin",
+                "alternateName": ["Hafeez Uddin GIS", "Hafeez Uddin Geospatial"],
+                "jobTitle": ["GIS Specialist", "Geospatial Engineer", "Remote Sensing Specialist"],
+                "description": "Professional GIS Specialist and Geospatial Engineer with expertise in Remote Sensing, ArcGIS, Google Earth Engine, Hazard Mapping, Environmental Planning, and Spatial Data Analysis. Based in Taif, Saudi Arabia.",
+                "url": "https://hafeez-uddin.vercel.app",
+                "sameAs": [
+                  "https://www.linkedin.com/in/hafeez-uddin-87a466217/"
+                ],
+                "email": "hafeezuddiniiui99@gmail.com",
+                "telephone": "+966503657540",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Taif",
+                  "addressRegion": "Mecca",
+                  "addressCountry": "Saudi Arabia"
+                },
+                "worksFor": {
+                  "@type": "Organization",
+                  "name": "Twaik Holding Group",
+                  "description": "Twaik Co. Ltd for Maintenance and Operation"
+                },
+                "alumniOf": {
+                  "@type": "EducationalOrganization",
+                  "name": "University of Peshawar",
+                  "description": "Degree in Geomatics (Remote Sensing and GIS)"
+                },
+                "knowsAbout": [
+                  "GIS",
+                  "Geographic Information Systems",
+                  "Remote Sensing",
+                  "Geospatial Analysis", 
+                  "Forest Monitoring",
+                  "NDVI Analysis",
+                  "Hazard Mapping",
+                  "Environmental Planning",
+                  "Spatial Analysis",
+                  "ArcGIS Pro",
+                  "Google Earth Engine",
+                  "ERDAS Imagine",
+                  "Python for GIS",
+                  "JavaScript for GIS",
+                  "Satellite Imagery Analysis",
+                  "LiDAR Processing",
+                  "Optical Remote Sensing",
+                  "Thermal Remote Sensing",
+                  "Microwave Remote Sensing",
+                  "Flood Risk Assessment",
+                  "GLOF Assessment",
+                  "Landslide Mapping",
+                  "Urban Planning",
+                  "Infrastructure Mapping",
+                  "Climate Change Monitoring",
+                  "Disaster Risk Reduction",
+                  "Land Management",
+                  "Agriculture Monitoring",
+                  "Environmental Conservation"
+                ],
+                "hasCredential": [
+                  {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "Geomatics (Remote Sensing and GIS)",
+                    "credentialCategory": "degree",
+                    "educationalLevel": "Bachelor"
+                  }
+                ],
+                "serviceType": [
+                  "GIS Analysis",
+                  "Remote Sensing Services",
+                  "Spatial Data Analysis",
+                  "Environmental Assessment",
+                  "Hazard Mapping",
+                  "Infrastructure Planning"
+                ]
               },
-              "worksFor": {
-                "@type": "Organization",
-                "name": "Twaik Holding Group",
-                "description": "Twaik Co. Ltd for Maintenance and Operation"
-              },
-              "alumniOf": {
-                "@type": "EducationalOrganization",
-                "name": "University of Peshawar",
-                "description": "Degree in Geomatics (Remote Sensing and GIS)"
-              },
-              "knowsAbout": [
-                "GIS",
-                "Geographic Information Systems",
-                "Remote Sensing",
-                "Geospatial Analysis", 
-                "Forest Monitoring",
-                "NDVI Analysis",
-                "Hazard Mapping",
-                "Environmental Planning",
-                "Spatial Analysis",
-                "ArcGIS Pro",
-                "Google Earth Engine",
-                "ERDAS Imagine",
-                "Python for GIS",
-                "JavaScript for GIS",
-                "Satellite Imagery Analysis",
-                "LiDAR Processing",
-                "Optical Remote Sensing",
-                "Thermal Remote Sensing",
-                "Microwave Remote Sensing",
-                "Flood Risk Assessment",
-                "GLOF Assessment",
-                "Landslide Mapping",
-                "Urban Planning",
-                "Infrastructure Mapping",
-                "Climate Change Monitoring",
-                "Disaster Risk Reduction",
-                "Land Management",
-                "Agriculture Monitoring",
-                "Environmental Conservation"
-              ],
-              "hasCredential": [
-                {
-                  "@type": "EducationalOccupationalCredential",
-                  "name": "Geomatics (Remote Sensing and GIS)",
-                  "credentialCategory": "degree",
-                  "educationalLevel": "Bachelor"
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "Hafeez Uddin - GIS Specialist Portfolio",
+                "url": "https://hafeez-uddin.vercel.app",
+                "description": "Professional portfolio showcasing GIS expertise, remote sensing projects, and geospatial analysis capabilities",
+                "author": {
+                  "@type": "Person",
+                  "name": "Hafeez Uddin"
+                },
+                "inLanguage": "en-US",
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://hafeez-uddin.vercel.app/?search={search_term_string}",
+                  "query-input": "required name=search_term_string"
                 }
-              ],
-              "serviceType": [
-                "GIS Analysis",
-                "Remote Sensing Services",
-                "Spatial Data Analysis",
-                "Environmental Assessment",
-                "Hazard Mapping",
-                "Infrastructure Planning"
-              ]
-            })
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://hafeez-uddin.vercel.app"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "About",
+                    "item": "https://hafeez-uddin.vercel.app#about"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Experience",
+                    "item": "https://hafeez-uddin.vercel.app#experience"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "Projects",
+                    "item": "https://hafeez-uddin.vercel.app#projects"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "name": "Contact",
+                    "item": "https://hafeez-uddin.vercel.app#contact"
+                  }
+                ]
+              }
+            ])
           }}
         />
       </body>
