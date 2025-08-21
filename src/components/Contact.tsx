@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Mail, Phone, MapPin, Linkedin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { ProtectedEmail } from './ProtectedEmail';
+import { encodeEmail } from '@/utils/emailProtection';
 
 const contactInfo = [
   {
@@ -11,6 +13,7 @@ const contactInfo = [
     label: 'Email',
     value: 'hafeezuddiniiui99@gmail.com',
     href: 'mailto:hafeezuddiniiui99@gmail.com',
+    encoded: encodeEmail('hafeezuddiniiui99@gmail.com'),
   },
   {
     icon: Phone,
@@ -136,6 +139,14 @@ export default function Contact() {
                       <p className="text-sm text-gray-600 dark:text-gray-400 font-medium">{item.label}</p>
                       {item.href === '#' ? (
                         <p className="text-gray-900 dark:text-white">{item.value}</p>
+                      ) : item.label === 'Email' && item.encoded ? (
+                        <ProtectedEmail
+                          email={item.encoded}
+                          subject="Portfolio Contact"
+                          className="text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors text-left bg-transparent border-none p-0 font-normal"
+                        >
+                          {item.value}
+                        </ProtectedEmail>
                       ) : (
                         <a
                           href={item.href}

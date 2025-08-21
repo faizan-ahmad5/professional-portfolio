@@ -1,8 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Mail, Phone, Linkedin, MapPin } from 'lucide-react';
+import { Mail, Phone, Linkedin, MapPin, Twitter, Facebook } from 'lucide-react';
 import Link from 'next/link';
+import { shareOnLinkedIn, shareOnTwitter, shareOnFacebook, shareViaEmail } from '@/utils/socialMedia';
 
 const socialLinks = [
   {
@@ -173,6 +174,56 @@ export default function Footer() {
             </motion.div>
           </div>
         </div>
+
+        {/* Social Sharing Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mt-12 pt-8 border-t border-gray-800"
+        >
+          <div className="text-center">
+            <h3 className="font-semibold text-lg mb-4 text-white">Share This Portfolio</h3>
+            <p className="text-gray-400 text-sm mb-6 max-w-md mx-auto">
+              Found my GIS expertise interesting? Share my portfolio with your network!
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button
+                onClick={shareOnLinkedIn}
+                className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors duration-200"
+                aria-label="Share on LinkedIn"
+              >
+                <Linkedin className="w-4 h-4" />
+                LinkedIn
+              </button>
+              <button
+                onClick={shareOnTwitter}
+                className="flex items-center gap-2 px-4 py-2 bg-sky-500 hover:bg-sky-600 text-white rounded-lg text-sm font-medium transition-colors duration-200"
+                aria-label="Share on Twitter"
+              >
+                <Twitter className="w-4 h-4" />
+                Twitter
+              </button>
+              <button
+                onClick={shareOnFacebook}
+                className="flex items-center gap-2 px-4 py-2 bg-blue-800 hover:bg-blue-900 text-white rounded-lg text-sm font-medium transition-colors duration-200"
+                aria-label="Share on Facebook"
+              >
+                <Facebook className="w-4 h-4" />
+                Facebook
+              </button>
+              <button
+                onClick={shareViaEmail}
+                className="flex items-center gap-2 px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg text-sm font-medium transition-colors duration-200"
+                aria-label="Share via Email"
+              >
+                <Mail className="w-4 h-4" />
+                Email
+              </button>
+            </div>
+          </div>
+        </motion.div>
 
         {/* Bottom Section */}
         <motion.div

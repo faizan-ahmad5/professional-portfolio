@@ -5,6 +5,23 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
 
+  // Performance optimizations
+  images: {
+    formats: ["image/avif", "image/webp"],
+    minimumCacheTTL: 31536000,
+  },
+
+  // Compiler optimizations
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production",
+  },
+
+  // Experimental features for performance
+  experimental: {
+    optimizeCss: true,
+    scrollRestoration: true,
+  },
+
   // Security headers for better SEO ranking
   async headers() {
     return [

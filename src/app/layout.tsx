@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import ErrorBoundaryComponent from "@/components/ErrorBoundary";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -11,8 +12,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Hafeez Uddin - GIS Specialist & Geospatial Engineer | Portfolio",
-  description: "Professional GIS Specialist and Geospatial Engineer with 2+ years experience in Remote Sensing, ArcGIS Pro, Google Earth Engine, hazard mapping, and environmental planning. Expert in spatial data analysis, satellite imagery processing, flood risk assessment, and GLOF mapping. Based in Saudi Arabia, specializing in disaster risk reduction and sustainable development solutions.",
+  title: "Hafeez Uddin - Expert GIS Specialist & Remote Sensing Engineer | ArcGIS Pro | Google Earth Engine | Portfolio Saudi Arabia",
+  description: "🗺️ Professional GIS Specialist & Remote Sensing Engineer in Saudi Arabia with 2+ years expertise in ArcGIS Pro, Google Earth Engine, ERDAS Imagine, hazard mapping, flood risk assessment, GLOF analysis, environmental planning, spatial data analysis, satellite imagery processing, disaster risk reduction, urban planning, and geospatial solutions. Based in Taif, specializing in sustainable development and climate change monitoring.",
   keywords: [
     "Hafeez Uddin",
     "Hafeez Uddin GIS",
@@ -118,7 +119,14 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#1e40af" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -132,8 +140,27 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} font-body antialiased`} suppressHydrationWarning={true}>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Initialize error handling
+              if (typeof window !== 'undefined') {
+                window.addEventListener('error', function(event) {
+                  if (event.filename && event.filename.includes('extension')) return;
+                  console.error('Global error:', event.error);
+                });
+                
+                window.addEventListener('unhandledrejection', function(event) {
+                  console.error('Unhandled promise rejection:', event.reason);
+                });
+              }
+            `,
+          }}
+        />
         <GoogleAnalytics />
-        {children}
+        <ErrorBoundaryComponent>
+          {children}
+        </ErrorBoundaryComponent>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
