@@ -30,14 +30,6 @@ const quickLinks = [
   { name: 'Contact', href: '#contact' },
 ];
 
-const skills = [
-  "Drone and Satellite Imagery Analysis and Processing",
-  "Hydrological and Watershed Modeling",
-  "Disaster Risk Assessment (Flood, GLOF, Landsliding)",
-  "Urban Growth and Infrastructure Mapping",
-  "Climate Change Monitoring and Analysis"
-];
-
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -51,7 +43,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white w-full max-w-full overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <motion.div
@@ -66,9 +58,6 @@ export default function Footer() {
                 </div>
                 <span className="font-heading font-bold text-xl">Hafeez Uddin</span>
               </Link>
-              <p className="text-gray-400 leading-relaxed mb-6">
-                Adept in GIS, Remote Sensing, and spatial data analysis, specializing in delivering actionable insights for environmental and infrastructure projects.
-              </p>
               <div className="flex items-center text-gray-400 text-sm">
                 <MapPin className="w-4 h-4 mr-2" />
                 <span>Taif, Mecca, Saudi Arabia</span>
@@ -106,28 +95,6 @@ export default function Footer() {
                   </a>
                 </li>
               </ul>
-            </motion.div>
-          </div>
-
-          {/* Skills */}
-          <div className="lg:col-span-1">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="font-semibold text-lg mb-4">Expertise</h3>
-              <div className="flex flex-wrap gap-2">
-                {skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-2 py-1 bg-gray-800 text-gray-300 rounded text-xs border border-gray-700"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
             </motion.div>
           </div>
 
