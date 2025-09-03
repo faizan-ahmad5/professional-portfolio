@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     "Urban Planning GIS",
     "Environmental Assessment",
     "Disaster Risk Reduction",
-    "Twaik Holding Group",
+    "Twaik Co. Ltd for Maintenance and Operation",
     "University of Peshawar",
     "Taif Saudi Arabia",
     "Mecca Saudi Arabia",
@@ -188,8 +188,7 @@ export default function RootLayout({
                 },
                 "worksFor": {
                   "@type": "Organization",
-                  "name": "Twaik Holding Group",
-                  "description": "Twaik Co. Ltd for Maintenance and Operation"
+                  "name": "Twaik Co. Ltd for Maintenance and Operation"
                 },
                 "alumniOf": {
                   "@type": "EducationalOrganization",
