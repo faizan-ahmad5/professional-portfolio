@@ -272,11 +272,11 @@ const ProfessionalChatbot: React.FC = () => {
       )}
       {/* Chat Window with local theme */}
       <div
-  className={`fixed z-50 bottom-24 right-6 md:w-[340px] w-[95vw] max-w-[95vw] ${isChatDark ? 'bg-gray-900/90 border-green-700' : 'bg-white border-primary-200'} backdrop-blur-lg rounded-2xl shadow-2xl flex flex-col border-2 transition-all duration-300 ${open ? "opacity-100 translate-y-0 scale-100 animate-fade-in" : "opacity-0 pointer-events-none scale-95 translate-y-8"}`}
+  className={`fixed z-50 md:bottom-24 md:right-6 bottom-4 right-2 md:w-[340px] w-[78vw] max-w-[85vw] px-3 pb-3 pt-2 ${isChatDark ? 'bg-gray-900/90 border-green-700' : 'bg-white border-primary-200'} backdrop-blur-lg rounded-3xl shadow-2xl flex flex-col border-2 transition-all duration-300 ${open ? "opacity-100 translate-y-0 scale-100 animate-fade-in" : "opacity-0 pointer-events-none scale-95 translate-y-8"}`}
         role="dialog"
         aria-modal="true"
         aria-label="Portfolio Assistant Chat"
-        style={{ minHeight: open ? 400 : 0, maxHeight: 520, height: open ? 400 : 0 }}
+        style={{ minHeight: open ? 260 : 0, maxHeight: '60vh', height: open ? '60vh' : 0, boxShadow: '0 4px 24px 0 rgba(0,0,0,0.10)' }}
       >
         {/* Header with theme toggle (local to chatbot) */}
         <div className={`flex items-center justify-between px-4 py-3 border-b ${isChatDark ? 'border-gray-800' : 'border-gray-200'} rounded-t-xl bg-gradient-to-br from-primary-600 to-green-500 text-white`}>
@@ -300,7 +300,7 @@ const ProfessionalChatbot: React.FC = () => {
           </div>
         </div>
         {/* Messages */}
-  <div className={`flex-1 overflow-y-auto px-3 py-2 space-y-2 ${isChatDark ? 'bg-gray-800/60 scrollbar-thumb-primary-800' : 'bg-gray-50/60 scrollbar-thumb-primary-200'} scrollbar-thin`} style={{ minHeight: 220, maxHeight: 320 }} aria-live="polite">
+  <div className={`flex-1 overflow-y-auto px-2 py-2 space-y-3 ${isChatDark ? 'bg-gray-800/60 scrollbar-thumb-primary-800' : 'bg-gray-50/60 scrollbar-thumb-primary-200'} scrollbar-thin`} style={{ minHeight: 120, maxHeight: '45vh' }} aria-live="polite">
           {messages.map((msg, idx) => (
             <div
               key={msg.id}
@@ -310,11 +310,11 @@ const ProfessionalChatbot: React.FC = () => {
                 <div className="flex items-end gap-1">{/* Reduced gap for compact look */}
                   {msg.sender === "bot" ? botAvatar : userAvatar}
                   <span
-                  className={`relative inline-block px-4 py-2 rounded-xl shadow-lg text-base max-w-[80%] break-words transition-all duration-200 border-2 ${
+                  className={`relative inline-block px-5 py-3 rounded-2xl shadow-xl text-base max-w-[80%] break-words transition-all duration-200 border-2 ${
                     msg.sender === "user"
-                      ? (isChatDark ? "bg-primary-700 text-white border-primary-800" : "bg-primary-600 text-white border-primary-700") + " rounded-br-none animate-slide-in-right"
-                      : (isChatDark ? "bg-gray-900/80 text-green-100 border-green-700" : "bg-white text-gray-900 border-primary-200") + " rounded-bl-none animate-slide-in-left"
-                  } animate-fade-in`}
+                      ? (isChatDark ? "bg-primary-700 text-white border-primary-800" : "bg-primary-600 text-white border-primary-700") + " rounded-br-3xl animate-slide-in-right"
+                      : (isChatDark ? "bg-gray-900/80 text-green-100 border-green-700" : "bg-white text-gray-900 border-primary-200") + " rounded-bl-3xl animate-slide-in-left"
+                  } animate-fade-in drop-shadow-md`}
                   style={{ animationDelay: `${idx * 40}ms` }}
                   aria-label={msg.sender === "user" ? "Your message bubble" : "Bot message bubble"}
                 >
@@ -389,7 +389,8 @@ const ProfessionalChatbot: React.FC = () => {
   <div className={`flex items-center gap-2 px-4 py-3 border-t ${isChatDark ? 'border-gray-800 bg-gray-900/80' : 'border-gray-200 bg-white/80'} rounded-b-xl ${listening ? 'border-4 border-green-400 animate-pulse' : ''}`}>
     <input
       type="text"
-      className="flex-1 rounded-lg border border-gray-300 dark:border-gray-600 px-3 py-2 text-base focus:outline-none focus:ring-2 focus:ring-primary-400 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-all animate-fade-in placeholder:italic placeholder:text-gray-400 dark:placeholder:text-gray-500 shadow-sm"
+  className="flex-1 rounded-xl border border-gray-300 dark:border-gray-600 px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-primary-400 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-all animate-fade-in placeholder:italic placeholder:text-gray-400 dark:placeholder:text-gray-500 shadow-md text-[16px]"
+  style={{ minWidth: 0 }}
       placeholder={listening ? "Listening... Please ask your question clearly." : "Type your message here..."}
       value={input}
       onChange={(e) => setInput(e.target.value)}
@@ -432,7 +433,7 @@ const ProfessionalChatbot: React.FC = () => {
     )}
   </div>
       {open && (
-        <div className="fixed inset-0 z-40 bg-black bg-opacity-30 md:hidden animate-fade-in" aria-hidden="true" onClick={toggleChat}></div>
+  <div className="fixed inset-0 z-40 bg-black bg-opacity-30 md:hidden animate-fade-in pointer-events-none" aria-hidden="true"></div>
       )}
     </div> {/* Close main chat window */}
     </>

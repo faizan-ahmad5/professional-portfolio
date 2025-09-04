@@ -24,6 +24,21 @@ Welcome to my professional portfolio website! Built with cutting-edge web techno
 
 This is a comprehensive professional portfolio website designed for a GIS Specialist, featuring modern web development practices and responsive design. The site effectively presents professional experience, technical skills, projects, and contact information in an engaging, user-friendly interface.
 
+## 🤖 Professional Chatbot
+
+The portfolio features a modern, scenario-based professional chatbot designed to answer queries about Hafeez (the website owner) and GIS expertise. Key highlights:
+
+- **WhatsApp-style UI:** Chat bubbles, avatars, send icon, timer, and waveform for voice input
+- **Voice Input:** Users can ask questions using their microphone (no voice output)
+- **Concise Answers:** Bot provides direct, scenario-based responses without repeating the question
+- **Knowledge Base:** Covers professional experience, skills, projects, motivational topics, and more
+- **Fallback Handling:** Gracefully manages unknown, slang, or off-topic queries
+- **Accessibility:** Keyboard navigation, ARIA labels, and high-contrast design
+- **Error Handling:** Robust error boundaries and monitoring for a seamless experience
+- **Custom Branding:** 'HU' favicon and apple-touch-icon for Google/browser tabs
+
+The chatbot is built with React, TypeScript, and Tailwind CSS, and leverages a custom API for smart, context-aware responses. It is designed for professional use, providing a fast, friendly, and accessible way to interact with the portfolio.
+
 ### Key Highlights:
 
 - **Professional Focus:** GIS, Remote Sensing, and Geospatial Analysis
@@ -40,9 +55,13 @@ This is a comprehensive professional portfolio website designed for a GIS Specia
 - **Dark/Light Theme:** Toggle between themes with smooth transitions
 - **Smooth Animations:** Framer Motion powered interactions
 - **Professional Typography:** Optimized font choices for readability
-- **Accessible Design:** WCAG compliant with proper contrast ratios
+- **Accessible Design:** WCAG compliant with proper contrast ratios, keyboard navigation, and ARIA labels
+- **WhatsApp-style Chatbot UI:** Modern chat bubbles, avatars, send icon, timer, and waveform for voice input
+- **Voice Chatbot:** Professional chatbot with voice input (mic), scenario-based Q&A, concise answers, and fallback handling
+- **Custom Favicon & Apple-Touch-Icon:** 'HU' branding for Google and browser tabs
+- **Error Handling:** Comprehensive error boundaries and monitoring system
 
-### � SEO & Performance Optimization
+### 🚀 SEO & Performance Optimization
 
 - **Advanced SEO Implementation:** Comprehensive meta tags with keyword targeting
 - **Schema Markup:** Rich snippets for Person, Professional Service, and Website schemas
@@ -51,9 +70,8 @@ This is a comprehensive professional portfolio website designed for a GIS Specia
 - **Custom 404 Page:** Engaging error page with helpful navigation
 - **Security Headers:** Enhanced security with proper headers configuration
 - **Email Protection:** Advanced email obfuscation for spam prevention
-- **Error Handling:** Comprehensive error boundaries and monitoring system
 
-### �📱 Navigation & Sections
+### 📱 Navigation & Sections
 
 - **Sticky Navigation:** Smooth scrolling navigation bar
 - **Hero Section:** Professional introduction with call-to-action
@@ -172,46 +190,58 @@ npm run lint    # Run ESLint for code quality
 
 ```
 professional-portfolio/
-├── public/                 # Static assets
-│   ├── images/            # Image files
-│   ├── icons/             # Icon files
-│   └── favicon.ico        # Site favicon
+├── public/                       # Static assets
+│   ├── favicon.svg               # Custom 'HU' favicon (browser/Google)
+│   ├── apple-icon.png            # Apple-touch-icon for mobile branding
+│   ├── profile.jpeg              # Profile image
+│   ├── resume.pdf                # Resume PDF
+│   ├── DistrictLowerChitralPublication.pdf
+│   ├── TehsilBalakotPublication.pdf
 ├── src/
-│   ├── app/               # Next.js App Router
-│   │   ├── critical.css   # Critical CSS for performance
-│   │   ├── globals.css    # Global styles
-│   │   ├── layout.tsx     # Root layout component
-│   │   ├── not-found.tsx  # Custom 404 page
-│   │   ├── page.tsx       # Home page
-│   │   ├── robots.ts      # SEO robots configuration
-│   │   ├── sitemap.ts     # SEO sitemap generation
-│   │   └── manifest.ts    # PWA manifest
-│   ├── components/        # React components
-│   │   ├── About.tsx      # About section
-│   │   ├── Contact.tsx    # Contact form
-│   │   ├── ErrorBoundary.tsx # Error handling component
-│   │   ├── Experience.tsx # Work experience
-│   │   ├── Footer.tsx     # Site footer with social sharing
-│   │   ├── Header.tsx     # Navigation header
-│   │   ├── Hero.tsx       # Hero section
-│   │   ├── Projects.tsx   # Projects showcase
-│   │   ├── ProtectedEmail.tsx # Email protection component
-│   │   └── Skills.tsx     # Skills display
-│   ├── data/              # Static data files
-│   │   ├── experience.json # Work experience data
-│   │   ├── projects.json   # Projects data
-│   │   └── skills.json     # Skills data
-│   └── utils/             # Utility functions
-│       ├── emailProtection.ts # Email obfuscation utilities
-│       ├── errorHandling.ts   # Error monitoring system
-│       └── socialMedia.ts     # Social sharing utilities
-├── .env.example           # Environment variables template
-├── .env.local             # Local environment variables (gitignored)
-├── .gitignore             # Git ignore rules
-├── next.config.js         # Next.js configuration
-├── tailwind.config.ts     # Tailwind CSS configuration
-├── tsconfig.json          # TypeScript configuration
-└── package.json           # Project dependencies
+│   ├── app/                      # Next.js App Router
+│   │   ├── apple-icon.tsx        # Apple icon export
+│   │   ├── critical.css          # Critical CSS for performance
+│   │   ├── globals.css           # Global styles
+│   │   ├── layout.tsx            # Root layout, favicon, SEO, theme
+│   │   ├── not-found.tsx         # Custom 404 page
+│   │   ├── page.tsx              # Home page
+│   │   ├── robots.ts             # SEO robots configuration
+│   │   ├── sitemap.ts            # SEO sitemap generation
+│   │   ├── manifest.ts           # PWA manifest
+│   │   └── api/
+│   │       └── contact/
+│   │           └── route.ts      # Contact form API route
+│   ├── components/               # React components
+│   │   ├── About.tsx             # About section
+│   │   ├── Contact.tsx           # Contact form
+│   │   ├── ErrorBoundary.tsx     # Error handling
+│   │   ├── Experience.tsx        # Work experience
+│   │   ├── GoogleAnalytics.tsx   # Analytics integration
+│   │   ├── Hero.tsx              # Hero section
+│   │   ├── Navigation.tsx        # Navigation bar
+│   │   ├── ProfessionalChatbot.tsx # WhatsApp-style voice chatbot
+│   │   ├── Projects.tsx          # Projects showcase
+│   │   ├── ProtectedEmail.tsx    # Email protection
+│   ├── data/                     # Static data files
+│   │   ├── experience.json       # Work experience data
+│   │   ├── projects.json         # Projects data
+│   └── utils/                    # Utility functions
+│       ├── analytics.ts          # Google Analytics helpers
+│       ├── emailProtection.ts    # Email obfuscation
+│       ├── errorHandling.ts      # Error monitoring
+│       ├── internalLinking.ts    # Internal link helpers
+│       └── socialMedia.ts        # Social sharing
+├── .env.example                  # Environment variables template
+├── .env.local                    # Local environment variables (gitignored)
+├── .gitignore                    # Git ignore rules
+├── eslint.config.mjs             # ESLint configuration
+├── next.config.js                # Next.js configuration
+├── postcss.config.mjs            # PostCSS configuration
+├── tailwind.config.ts            # Tailwind CSS configuration
+├── tsconfig.json                 # TypeScript configuration
+├── tsconfig.tsbuildinfo          # TypeScript build info
+├── vercel.json                   # Vercel deployment config
+└── package.json                  # Project dependencies
 ```
 
 ## 🔧 Environment Variables
