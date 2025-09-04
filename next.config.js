@@ -1,10 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  allowedDevOrigins: [
-    "http://localhost:3000",
-    "http://192.168.100.1:3000",
-    // Add more dev origins if needed
-  ],
+  // allowedDevOrigins removed: not a valid Next.js config option
   trailingSlash: false,
   generateEtags: false,
   poweredByHeader: false,
@@ -13,7 +9,8 @@ const nextConfig = {
   // Performance optimizations
   images: {
     formats: ["image/avif", "image/webp"],
-    minimumCacheTTL: 31536000,
+    minimumCacheTTL: 60,
+    // dangerouslyAllowSVG and contentSecurityPolicy are not valid image options in Next.js 14+
   },
 
   // Compiler optimizations
@@ -54,16 +51,10 @@ const nextConfig = {
     ];
   },
 
-  // Optimize images
-  images: {
-    formats: ["image/webp", "image/avif"],
-    minimumCacheTTL: 60,
-    dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-  },
-
   // Experimental features
   experimental: {
+    optimizeCss: true,
+    scrollRestoration: true,
     optimizePackageImports: ["framer-motion", "lucide-react"],
   },
 };

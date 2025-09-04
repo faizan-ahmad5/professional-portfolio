@@ -5,6 +5,7 @@ import "./globals.css";
 
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { Analytics } from "@vercel/analytics/next";
+import ProfessionalChatbot from "@/components/ProfessionalChatbot";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -120,6 +121,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.png" sizes="32x32" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" sizes="180x180" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <meta name="theme-color" content="#16a34a" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
@@ -168,6 +172,7 @@ export default function RootLayout({
   {children}
   <Analytics />
   <SpeedInsights />
+  <ProfessionalChatbot />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
