@@ -42,6 +42,7 @@ declare global {
 }
 
 const ProfessionalChatbot: React.FC = () => {
+  // ...existing code...
   // Helper to enhance grammar and friendliness
   function enhanceReply(text: string): string {
     let reply = text.trim();
@@ -100,6 +101,13 @@ const ProfessionalChatbot: React.FC = () => {
 
   // Voice recognition setup
   const recognitionRef = useRef<SpeechRecognition | null>(null);
+
+  // Auto-scroll to latest message
+  useEffect(() => {
+    if (open && chatEndRef.current) {
+      chatEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [messages, open]);
 
   // Hide greeting after timeout or when chat opens
   // Timer for voice input
@@ -272,7 +280,7 @@ const ProfessionalChatbot: React.FC = () => {
       )}
       {/* Chat Window with local theme */}
       <div
-  className={`fixed z-50 md:bottom-24 md:right-6 bottom-4 right-2 md:w-[340px] w-[78vw] max-w-[85vw] px-3 pb-3 pt-2 ${isChatDark ? 'bg-gray-900/90 border-green-700' : 'bg-white border-primary-200'} backdrop-blur-lg rounded-3xl shadow-2xl flex flex-col border-2 transition-all duration-300 ${open ? "opacity-100 translate-y-0 scale-100 animate-fade-in" : "opacity-0 pointer-events-none scale-95 translate-y-8"}`}
+  className={`fixed z-50 md:bottom-24 md:right-6 bottom-4 right-2 md:w-[340px] w-[92vw] max-w-[98vw] px-4 pb-4 pt-3 ${isChatDark ? 'bg-gray-900/80 border-green-700' : 'bg-white/80 border-primary-200'} backdrop-blur-2xl rounded-3xl shadow-2xl flex flex-col border-2 transition-all duration-300 ${open ? "opacity-100 translate-y-0 scale-100 animate-fade-in" : "opacity-0 pointer-events-none scale-95 translate-y-8"}`}
         role="dialog"
         aria-modal="true"
         aria-label="Portfolio Assistant Chat"
@@ -300,7 +308,7 @@ const ProfessionalChatbot: React.FC = () => {
           </div>
         </div>
         {/* Messages */}
-  <div className={`flex-1 overflow-y-auto px-2 py-2 space-y-3 ${isChatDark ? 'bg-gray-800/60 scrollbar-thumb-primary-800' : 'bg-gray-50/60 scrollbar-thumb-primary-200'} scrollbar-thin`} style={{ minHeight: 120, maxHeight: '45vh' }} aria-live="polite">
+  <div className={`flex-1 overflow-y-auto px-3 py-3 space-y-4 ${isChatDark ? 'bg-gray-800/60 scrollbar-thumb-primary-800' : 'bg-gray-50/60 scrollbar-thumb-primary-200'} scrollbar-thin`} style={{ minHeight: 140, maxHeight: '55vh' }} aria-live="polite">
           {messages.map((msg, idx) => (
             <div
               key={msg.id}
@@ -384,54 +392,53 @@ const ProfessionalChatbot: React.FC = () => {
           )}
           <div ref={chatEndRef} />
         </div>
-  {/* Quick Replies removed */}
-        {/* Input & Voice Controls */}
-  <div className={`flex items-center gap-2 px-4 py-3 border-t ${isChatDark ? 'border-gray-800 bg-gray-900/80' : 'border-gray-200 bg-white/80'} rounded-b-xl ${listening ? 'border-4 border-green-400 animate-pulse' : ''}`}>
-    <input
-      type="text"
-  className="flex-1 rounded-xl border border-gray-300 dark:border-gray-600 px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-primary-400 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-all animate-fade-in placeholder:italic placeholder:text-gray-400 dark:placeholder:text-gray-500 shadow-md text-[16px]"
-  style={{ minWidth: 0 }}
-      placeholder={listening ? "Listening... Please ask your question clearly." : "Type your message here..."}
-      value={input}
-      onChange={(e) => setInput(e.target.value)}
-      onKeyDown={handleKeyDown}
-      aria-label="Type your message"
-      autoFocus={open}
-      autoCorrect="on"
-      spellCheck={true}
-      disabled={listening}
-      tabIndex={0}
-    />
-    {/* Send button for text */}
-    {!listening && (
-      <button
-        onClick={() => sendMessage()}
-        className="bg-blue-500 hover:bg-blue-600 text-white rounded-full p-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 shadow flex items-center justify-center"
-        aria-label="Send message"
-        disabled={loading || !input.trim()}
-        type="button"
-        tabIndex={0}
-      >
-        {/* Right arrow icon */}
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
-        </svg>
-      </button>
-    )}
-    {/* Microphone Button */}
-    {!listening && (
-      <button
-        onClick={startListening}
-        className="bg-green-500 hover:bg-green-600 text-white rounded-full p-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 shadow-md flex items-center justify-center"
-        aria-label="Start voice input"
-        disabled={loading}
-        type="button"
-        tabIndex={0}
-      >
-        <span role="img" aria-label="Microphone" className="animate-bounce">🎤</span>
-      </button>
-    )}
-  </div>
+        {/* Sticky Input & Voice Controls */}
+        <div className={`flex items-center gap-2 px-4 py-3 border-t ${isChatDark ? 'border-gray-800 bg-gray-900/80' : 'border-gray-200 bg-white/80'} rounded-b-xl ${listening ? 'border-4 border-green-400 animate-pulse' : ''} sticky bottom-0 left-0 w-full z-20`} style={{background: isChatDark ? 'rgba(17,24,39,0.92)' : 'rgba(255,255,255,0.96)'}}>
+          <input
+            type="text"
+            className="flex-1 rounded-xl border border-gray-300 dark:border-gray-600 px-5 py-3 text-base focus:outline-none focus:ring-2 focus:ring-primary-400 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-all animate-fade-in placeholder:italic placeholder:text-gray-400 dark:placeholder:text-gray-500 shadow-md text-[17px]"
+            style={{ minWidth: 0 }}
+            placeholder={listening ? "Listening... Please ask your question clearly." : "Type your message here..."}
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={handleKeyDown}
+            aria-label="Type your message"
+            autoFocus={open}
+            autoCorrect="on"
+            spellCheck={true}
+            disabled={listening}
+            tabIndex={0}
+          />
+          {/* Send button for text */}
+          {!listening && (
+            <button
+              onClick={() => sendMessage()}
+              className="bg-blue-500 hover:bg-blue-600 text-white rounded-full p-3 md:p-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 shadow flex items-center justify-center w-12 h-12 md:w-10 md:h-10"
+              aria-label="Send message"
+              disabled={loading || !input.trim()}
+              type="button"
+              tabIndex={0}
+            >
+              {/* Right arrow icon */}
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-7 h-7 md:w-6 md:h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14m-7-7l7 7-7 7" />
+              </svg>
+            </button>
+          )}
+          {/* Microphone Button */}
+          {!listening && (
+            <button
+              onClick={startListening}
+              className="bg-green-500 hover:bg-green-600 text-white rounded-full p-3 md:p-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-green-400 shadow-md flex items-center justify-center w-12 h-12 md:w-10 md:h-10"
+              aria-label="Start voice input"
+              disabled={loading}
+              type="button"
+              tabIndex={0}
+            >
+              <span role="img" aria-label="Microphone" className="animate-bounce text-xl md:text-base">🎤</span>
+            </button>
+          )}
+        </div>
       {open && (
   <div className="fixed inset-0 z-40 bg-black bg-opacity-30 md:hidden animate-fade-in pointer-events-none" aria-hidden="true"></div>
       )}

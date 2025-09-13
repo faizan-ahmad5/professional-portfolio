@@ -15,11 +15,11 @@
     "technologies": ["ArcGIS Pro", "ArcMap", "Google Earth", "High Resolution Satellite Imagery"]
   },
   {
-    "id": "magma-systems",
-    "title": "GIS Analyst",
-    "company": "Magma Systems (PVT) LTD.",
-    "location": "Islamabad, Pakistan",
-    "period": "2024 – 2025",
+  "id": "magma-systems",
+  "title": "GIS Analyst",
+  "company": "Magma Systems (PVT) LTD.",
+  "location": "Islamabad, Pakistan",
+  "period": "2024",
     "type": "Full-time",
     "responsibilities": [
       "Spatial data analysis and visualization",
@@ -29,6 +29,21 @@
       "Client consultation and project management"
     ],
     "technologies": ["ArcMap", "ArcGIS Pro", "SQL", "Python", "FME"]
+  },
+  {
+  "id": "aga-khan-intern",
+  "title": "GIS Intern",
+  "company": "AKRSP Placed with Aga Khan Agency for Habitat, AKAH-Pakistan",
+  "location": "Lower Chitral, Pakistan",
+  "period": "2024",
+    "type": "Internship",
+    "responsibilities": [
+     "Utilizes Remote Sensing and GIS to monitor and analyze natural disasters",
+      "Develops risk and hazard maps for disaster preparedness and mitigation",
+      "Assist in hazard and risk mapping using drone and satellite imagery",
+      "Creating and maintaining geodatabase of hazard and risk map"
+    ],
+    "technologies": ["ArcGIS Pro", "ArcMap", "QGIS", "Revit", "HEC-RAS", "GPS"]
   },
   {
     "id": "forestry-intern",
@@ -44,20 +59,5 @@
       "Identification of forest degradation using Remote Sensing"
     ],
     "technologies": ["Drone and Satellite Imagery", "ArcMap", "QGIS", "ArcGIS Pro", "ENVI", "ERDAS Imagine", "Google Earth Pro"]
-  },
-  {
-    "id": "aga-khan-intern",
-    "title": "GIS Intern",
-    "company": "AKRSP Placed with Aga Khan Agency for Habitat, AKAH-Pakistan",
-    "location": "Lower Chitral, Pakistan",
-    "period": "2023",
-    "type": "Internship",
-    "responsibilities": [
-     "Utilizes Remote Sensing and GIS to monitor and analyze natural disasters",
-      "Develops risk and hazard maps for disaster preparedness and mitigation",
-      "Assist in hazard and risk mapping using drone and satellite imagery",
-      "Creating and maintaining geodatabase of hazard and risk map"
-    ],
-    "technologies": ["ArcGIS Pro", "ArcMap", "QGIS", "Revit", "HEC-RAS", "GPS"]
   }
 ]
