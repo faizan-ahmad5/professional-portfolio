@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-import GoogleAnalytics from "@/components/GoogleAnalytics";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import ProfessionalChatbot from "@/components/ProfessionalChatbot";
 
@@ -138,6 +138,22 @@ export default function RootLayout({
             .hero-section{min-height:100vh;display:flex;align-items:center;justify-content:center}
           `
         }} />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-BT9NPQNZWF"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-BT9NPQNZWF');
+            `,
+          }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -168,7 +184,6 @@ export default function RootLayout({
             `,
           }}
         />
-  <GoogleAnalytics />
   {children}
   <Analytics />
   <SpeedInsights />
