@@ -1,13 +1,13 @@
-# 🌟 Professional GIS Portfolio Website
+#  Professional GIS Portfolio Website
 
 Welcome to my professional portfolio website! Built with cutting-edge web technologies, it features a clean, professional design optimized for both desktop and mobile devices.
 
 ## 🔗 Live Demo
 
-🌐 **Website:** [hafeez-uddin.vercel.app](https://hafeez-uddin.vercel.app)  
-📂 **Repository:** [github.com/faizan-ahmad5/professional-portfolio](https://github.com/faizan-ahmad5/professional-portfolio)
+**Website:** [hafeez-uddin.vercel.app](https://hafeez-uddin.vercel.app)  
+**Repository:** [github.com/faizan-ahmad5/professional-portfolio](https://github.com/faizan-ahmad5/professional-portfolio)
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Project Overview](#-project-overview)
 - [Features](#-features)
@@ -20,11 +20,11 @@ Welcome to my professional portfolio website! Built with cutting-edge web techno
 - [Analytics & Performance](#-analytics--performance)
 - [Contact](#-contact)
 
-## 🎯 Project Overview
+## Project Overview
 
 This is a comprehensive professional portfolio website designed for a GIS Specialist, featuring modern web development practices and responsive design. The site effectively presents professional experience, technical skills, projects, and contact information in an engaging, user-friendly interface.
 
-## 🤖 Professional Chatbot
+## Professional Chatbot
 
 The portfolio features a modern, scenario-based professional chatbot designed to answer queries about Hafeez (the website owner) and GIS expertise. Key highlights:
 
@@ -47,9 +47,9 @@ The chatbot is built with React, TypeScript, and Tailwind CSS, and leverages a c
 - **Fully Responsive:** Seamless experience across all devices
 - **Analytics Integrated:** Google Analytics 4 for visitor tracking
 
-## ✨ Features
+## Features
 
-### 🎨 Design & User Experience
+### Design & User Experience
 
 - **Responsive Design:** Fully responsive across mobile, tablet, and desktop
 - **Dark/Light Theme:** Toggle between themes with smooth transitions
@@ -61,7 +61,7 @@ The chatbot is built with React, TypeScript, and Tailwind CSS, and leverages a c
 - **Custom Favicon & Apple-Touch-Icon:** 'HU' branding for Google and browser tabs
 - **Error Handling:** Comprehensive error boundaries and monitoring system
 
-### 🚀 SEO & Performance Optimization
+### SEO & Performance Optimization
 
 - **Advanced SEO Implementation:** Comprehensive meta tags with keyword targeting
 - **Schema Markup:** Rich snippets for Person, Professional Service, and Website schemas
@@ -71,7 +71,7 @@ The chatbot is built with React, TypeScript, and Tailwind CSS, and leverages a c
 - **Security Headers:** Enhanced security with proper headers configuration
 - **Email Protection:** Advanced email obfuscation for spam prevention
 
-### 📱 Navigation & Sections
+### Navigation & Sections
 
 - **Sticky Navigation:** Smooth scrolling navigation bar
 - **Hero Section:** Professional introduction with call-to-action
@@ -81,7 +81,7 @@ The chatbot is built with React, TypeScript, and Tailwind CSS, and leverages a c
 - **Projects Portfolio:** Featured project demonstrations
 - **Contact Form:** Functional contact form with Web3Forms integration
 
-### ⚡ Performance Features
+### Performance Features
 
 - **Server-Side Rendering:** Next.js App Router for optimal performance
 - **Image Optimization:** Next.js Image component for fast loading
@@ -89,14 +89,14 @@ The chatbot is built with React, TypeScript, and Tailwind CSS, and leverages a c
 - **SEO Optimized:** Meta tags, structured data, and sitemap
 - **Progressive Web App:** PWA capabilities for mobile experience
 
-### � Security & Privacy
+### Security & Privacy
 
 - **Environment Variables:** Secure API key management
 - **Form Validation:** Client and server-side validation
 - **HTTPS Only:** Secure communication protocols
 - **Privacy Compliant:** GDPR-friendly analytics implementation
 
-## 🛠 Technologies Used
+## Technologies Used
 
 ### Frontend Framework
 
@@ -129,7 +129,7 @@ The chatbot is built with React, TypeScript, and Tailwind CSS, and leverages a c
 - **Git** - Version control
 - **GitHub** - Repository hosting and collaboration
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -244,7 +244,7 @@ professional-portfolio/
 └── package.json                  # Project dependencies
 ```
 
-## 🔧 Environment Variables
+## Environment Variables
 
 Create a `.env.local` file in the root directory with the following variables:
 
@@ -265,7 +265,7 @@ NEXT_PUBLIC_SITE_URL=https://your-domain.com
 - `WEB3FORMS_ACCESS_KEY`: Web3Forms API key for contact form
 - `NEXT_PUBLIC_SITE_URL`: Your website URL for SEO and metadata
 
-## 🚀 Deployment
+## Deployment
 
 ### Deploy on Vercel (Recommended)
 
@@ -290,7 +290,7 @@ NEXT_PUBLIC_SITE_URL=https://your-domain.com
 - **GitHub Pages:** Static export with `next export`
 - **Self-hosted:** Build and deploy to your own server
 
-## 🔍 SEO & Performance Features
+##  SEO & Performance Features
 
 ### Advanced SEO Implementation
 
@@ -337,7 +337,7 @@ This portfolio includes comprehensive SEO optimization for maximum Google rankin
 - **Technical Skills:** Strong ranking for "ArcGIS Pro", "Google Earth Engine"
 - **Professional Services:** Enhanced visibility for geospatial consulting
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Whether you want to fix bugs, add features, or improve documentation, your help is appreciated.
 
@@ -388,15 +388,15 @@ Contributions are welcome! Whether you want to fix bugs, add features, or improv
 
 ### Areas for Contribution
 
-- 🎨 UI/UX improvements and design enhancements
-- 📱 Mobile responsiveness optimizations
-- ⚡ Performance optimizations
-- 🔧 New features and functionality
-- 🐛 Bug fixes and issue resolution
-- 📚 Documentation improvements
-- 🧪 Testing and quality assurance
+- UI/UX improvements and design enhancements
+- Mobile responsiveness optimizations
+- Performance optimizations
+- New features and functionality
+- Bug fixes and issue resolution
+- Documentation improvements
+- Testing and quality assurance
 
-## 📊 Analytics & Performance
+## Analytics & Performance
 
 ### Google Analytics 4
 
@@ -410,20 +410,6 @@ Contributions are welcome! Whether you want to fix bugs, add features, or improv
 - **Core Web Vitals:** Optimized for excellent user experience
 - **SEO Score:** 100/100 with structured data
 
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🙏 Acknowledgments
-
-- **Next.js Team** - For the amazing React framework
-- **Vercel** - For seamless deployment and hosting
-- **Tailwind CSS** - For the utility-first CSS framework
-- **Framer Motion** - For smooth animations and interactions
-- **Web3Forms** - For reliable contact form handling
-- **Lucide** - For beautiful, consistent icons
-
----
 
 **Developed by [Faizan Ahmad Khan](https://www.linkedin.com/in/faizan-ahmad-khan5/)**
 
